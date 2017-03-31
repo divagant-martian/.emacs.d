@@ -9,8 +9,6 @@
              '("melpa" . "https://melpa.org/packages/"))
 
 ;; installed packages
-(setq custom-file "~/.emacs.d/package-selected-packages.el")
-(load custom-file)
 
 ;; to install everything: M-x RET package-install-selected-packages
 ;; Adding custom libraries
@@ -21,5 +19,7 @@
 (load-library "look")
 (load-library "others")
 
+(setq custom-file "~/.emacs.d/package-selected-packages.el")
+(load custom-file)
 
 ;;; init.el ends here
