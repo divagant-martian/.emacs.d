@@ -4,6 +4,7 @@
 
 ;; switch between available themes
 (require 'theme-looper )
+(theme-looper-set-ignored-themes '(manoj-dark))
 (global-set-key (kbd "C-t") 'theme-looper-enable-next-theme)
 (global-set-key (kbd "C-<") 'theme-looper-enable-random-theme)
 
