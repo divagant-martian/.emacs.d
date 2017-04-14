@@ -69,7 +69,7 @@ BUFFER may be either a buffer or its name (a string)."
               ;; Ignore error, in particular,
               ;; "Attempt to delete the sole visible or iconified frame".
               (condition-case nil (delete-window win) (error nil))))))
-    (when (interactive-p)
+    (when (called-interactively-p 'interactive)
       (error "Cannot kill buffer.  Not a live buffer: `%s'" buffer))))
 (substitute-key-definition 'kill-buffer 'kill-buffer-and-its-windows global-map)
 

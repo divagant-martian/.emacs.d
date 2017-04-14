@@ -51,6 +51,14 @@
 (global-set-key (kbd "<f4>") 'whitespace-mode)
 (global-set-key (kbd "<f5>") 'whitespace-cleanup)
 
+;; joins two lines fixing unwanted indentation
+(defun pull-next-line()
+  (interactive)
+  (move-end-of-line 1)
+  (kill-line)
+  (just-one-space))
+(global-set-key (kbd "C-j") 'pull-next-line)
+
 ;; Correctly indent between braces ---------------------------------------------
 (defun av/auto-indent-method ()
   "Automatically indent a method by adding two newlines.
