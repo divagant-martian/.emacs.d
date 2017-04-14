@@ -51,6 +51,10 @@
 (global-set-key (kbd "<f4>") 'whitespace-mode)
 (global-set-key (kbd "<f5>") 'whitespace-cleanup)
 
+;; delete all whitespaces if deleting one
+(require 'hungry-delete)
+(global-hungry-delete-mode)
+
 ;; joins two lines fixing unwanted indentation
 (defun pull-next-line()
   (interactive)
