@@ -8,6 +8,17 @@
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
 
+;; refreshes contents and installs everything
+(defun install-everything()
+  (interactive)
+  (package-refresh-contents)
+  (package-install-selected-packages))
+
+
+(defun recompile-everything()
+  (interactive)
+  (byte-recompile-directory (expand-file-name "~/.emacs.d") 0))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
