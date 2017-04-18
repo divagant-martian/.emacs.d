@@ -30,11 +30,20 @@
 (global-set-key (kbd "M-<up>") 'shift-text-up)
 (global-set-key (kbd "M-<down>") 'shift-text-down)
 
+;; allow multiple cursors
+(require 'multiple-cursors)
+(global-unset-key (kbd "M-<down-mouse-1>"))
+(global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
+
 ;; clean buffer
 (global-set-key (kbd "C-x DEL") 'erase-buffer)
 
 ;; selected text gets replaced
 (delete-selection-mode 1)
+
+(require 'string-inflection)
+(global-set-key (kbd "M-c") 'string-inflection-camelcase)
+(global-set-key (kbd "M-s") 'string-inflection-underscore)
 
 ;; All about tabs and spaces ---------------------------------------------------
 

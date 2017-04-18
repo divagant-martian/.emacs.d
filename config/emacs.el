@@ -9,36 +9,9 @@
 (global-set-key (kbd "<f10>") 'menu-bar-mode)
 
 ;; Cycle buffers ignoring spetial buffers --------------------------------------
-(defvar my-skippable-buffers '("*Messages*" "*scratch*" "*Help*"
-                               "*Flycheck error messages*" "*Completions*"
-                               "*Oz Emulator*" "*Oz Compiler*"
-                               "*Disabled Command*")
-  "Buffer names ignored by `my-next-buffer' and `my-previous-buffer'.")
-
-(defun my-change-buffer (change-buffer)
-  "Call CHANGE-BUFFER until current buffer is not in `my-skippable-buffers'."
-  (let ((initial (current-buffer)))
-    (funcall change-buffer)
-    (let ((first-change (current-buffer)))
-      (catch 'loop
-        (while (member (buffer-name) my-skippable-buffers)
-          (funcall change-buffer)
-          (when (eq (current-buffer) first-change)
-            (switch-to-buffer initial)
-            (throw 'loop t)))))))
-
-(defun my-next-buffer ()
-  "Variant of `next-buffer' that skips `my-skippable-buffers'."
-  (interactive)
-  (my-change-buffer 'next-buffer))
-
-(defun my-previous-buffer ()
-  "Variant of `previous-buffer' that skips `my-skippable-buffers'."
-  (interactive)
-  (my-change-buffer 'previous-buffer))
-
-(global-set-key [remap next-buffer] 'my-next-buffer)
-(global-set-key [remap previous-buffer] 'my-previous-buffer)
+(set-frame-parameter
+ (selected-frame) 'buffer-predicate
+ (lambda (buf) (not (string-match-p "^*" (buffer-name buf)))))
 
 ;; override for switching buffers
 (global-set-key (kbd "M-<left>") 'next-buffer)
