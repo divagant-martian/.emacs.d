@@ -64,13 +64,11 @@
 (require 'hungry-delete)
 (global-hungry-delete-mode)
 
-;; joins two lines fixing unwanted indentation
-(defun pull-next-line()
-  (interactive)
-  (move-end-of-line 1)
-  (kill-line)
-  (just-one-space))
-(global-set-key (kbd "C-j") 'pull-next-line)
+;; when whitespace is active, leaves exactly one space wherever it is typed
+(add-hook 'whitespace-load-hook
+          (lambda () (local-set-key (kbd "SPC") 'just-one-space)))
+
+(add-hook 'before-save-hook 'whitespace-cleanup)
 
 ;; Correctly indent between braces ---------------------------------------------
 (defun av/auto-indent-method ()
