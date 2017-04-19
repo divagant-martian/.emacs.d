@@ -65,7 +65,7 @@
 (global-hungry-delete-mode)
 
 ;; when whitespace is active, leaves exactly one space wherever it is typed
-(add-hook 'whitespace-load-hook
+(add-hook 'whitespace-mode-hook
           (lambda () (local-set-key (kbd "SPC") 'just-one-space)))
 
 (add-hook 'before-save-hook 'whitespace-cleanup)
