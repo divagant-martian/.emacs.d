@@ -17,6 +17,12 @@
 (global-set-key (kbd "M-<left>") 'next-buffer)
 (global-set-key (kbd "M-<right>") 'previous-buffer)
 
+;; switching between windows
+(global-set-key (kbd "S-M-<up>") 'windmove-up)
+(global-set-key (kbd "S-M-<down>") 'windmove-down)
+(global-set-key (kbd "S-M-<left>") 'windmove-left)
+(global-set-key (kbd "S-M-<right>") 'windmove-right)
+
 ;; avoid auto save and temp files ----------------------------------------------
 (setq auto-save-default nil)
 (setq make-backup-files nil)

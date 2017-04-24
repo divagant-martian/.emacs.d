@@ -46,4 +46,11 @@
       web-mode-code-indent-offset 2)
 (setq-default js-indent-level 2)
 
+;; Scala -----------------------------------------------------------------------
+(use-package scala-mode
+  :interpreter
+  ("scala" . scala-mode))
+
+
+
 ;;; lang.el ends here
