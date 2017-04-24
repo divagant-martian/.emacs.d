@@ -60,4 +60,7 @@ BUFFER may be either a buffer or its name (a string)."
   (kill-emacs))
 (global-set-key (kbd "C-x C-c") 'my-kill-emacs)
 
+;; Change defaults font size ---------------------------------------------------
+(set-face-attribute 'default nil :height 100)
+
 ;;; emacs.el ends here
