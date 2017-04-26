@@ -42,7 +42,7 @@
 (delete-selection-mode 1)
 
 (require 'string-inflection)
-(global-set-key (kbd "M-c") 'string-inflection-camelcase)
+(global-set-key (kbd "M-c") 'string-inflection-lower-camelcase)
 (global-set-key (kbd "M-s") 'string-inflection-underscore)
 
 ;; All about tabs and spaces ---------------------------------------------------
