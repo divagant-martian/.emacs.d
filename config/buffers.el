@@ -44,6 +44,7 @@
 (require 'string-inflection)
 (global-set-key (kbd "M-c") 'string-inflection-lower-camelcase)
 (global-set-key (kbd "M-s") 'string-inflection-underscore)
+(global-set-key (kbd "M-m") 'mc/mark-all-like-this)
 
 ;; All about tabs and spaces ---------------------------------------------------
 

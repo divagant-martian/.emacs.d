@@ -3,15 +3,21 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        backward-sexp
         company-indent-or-complete-common
+        forward-sexp
         hungry-delete-backward
         hungry-delete-forward
+        kill-region
         mouse-buffer-menu
         skeleton-pair-insert-maybe
+        smart-comment
         ))
 
 (setq mc/cmds-to-run-once
       '(
         mouse-set-region
         my-previous-buffer
+        next-buffer
+        previous-buffer
         ))
