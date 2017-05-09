@@ -3,8 +3,10 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        av/auto-indent-method-maybe
         backward-sexp
         company-indent-or-complete-common
+        electric-newline-and-maybe-indent
         forward-sexp
         hungry-delete-backward
         hungry-delete-forward
@@ -12,6 +14,7 @@
         mouse-buffer-menu
         skeleton-pair-insert-maybe
         smart-comment
+        web-mode-comment-indent-new-line
         ))
 
 (setq mc/cmds-to-run-once
