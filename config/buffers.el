@@ -49,6 +49,7 @@
 
 ;; folding functionality
 (require 'origami)
+(add-to-list 'origami-parser-alist '(rust-mode . origami-c-style-parser))
 (define-key origami-mode-map (kbd "M-f") 'origami-toggle-node)
 (global-origami-mode 1)
 

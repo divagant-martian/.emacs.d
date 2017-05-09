@@ -29,7 +29,6 @@
 (global-set-key (kbd "TAB") #'company-indent-or-complete-common)
 (setq-default company-tooltip-align-annotations t)
 
-
 ;; HTML, Js, Jsx, Css ----------------------------------------------------------
 
 (require 'web-mode)
