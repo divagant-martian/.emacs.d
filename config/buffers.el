@@ -76,7 +76,7 @@
 (add-hook 'whitespace-mode-hook
           (lambda () (local-set-key (kbd "SPC") 'just-one-space)))
 
-;; (add-hook 'before-save-hook 'whitespace-cleanup)
+(add-hook 'before-save-hook 'whitespace-cleanup)
 
 ;; Correctly indent between braces ---------------------------------------------
 (defun av/auto-indent-method ()
