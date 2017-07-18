@@ -35,6 +35,7 @@
 (global-unset-key (kbd "M-<down-mouse-1>"))
 (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
 (global-set-key (kbd "M-m") 'mc/mark-all-like-this)
+(global-set-key (kbd "M-n") 'mc/mark-next-like-this)
 
 ;; clean buffer
 (global-set-key (kbd "C-x DEL") 'erase-buffer)
@@ -50,6 +51,7 @@
 ;; folding functionality
 (require 'origami)
 (add-to-list 'origami-parser-alist '(rust-mode . origami-c-style-parser))
+(add-to-list 'origami-parser-alist '(javascript-mode . origami-c-style-parser))
 (define-key origami-mode-map (kbd "M-f") 'origami-toggle-node)
 (global-origami-mode 1)
 
@@ -65,6 +67,8 @@
  (lambda() (interactive)(insert "\t")))
 
 ;; activate whitespace mode
+(setq-default fill-column 80)
+(setq whitespace-line-column fill-column)
 (global-set-key (kbd "<f4>") 'whitespace-mode)
 (global-set-key (kbd "<f5>") 'whitespace-cleanup)
 
@@ -98,11 +102,11 @@ Puts point in the middle line as well as indent it by correct amount."
 
 ;; Utility to fill line with dashes
 (defun fill-to-end ()
-  "Fill rest of line with dashes up to 80 column width."
+  "Fill rest of line with dashes up to fill column width."
   (interactive)
   (save-excursion
     (end-of-line)
-    (while (< (current-column) 80)
+    (while (< (current-column) fill-column)
       (insert-char ?-))))
 
 ;; scrolling  ------------------------------------------------------------------
