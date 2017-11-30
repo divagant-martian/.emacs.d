@@ -22,16 +22,16 @@
 (global-set-key (kbd "C-z") 'undo)
 
 ;; Smart comments
-(require 'smart-comment)
+(use-package smart-comment)
 (global-set-key (kbd "<f2>") 'smart-comment)
 
 ;; move lines up and down
-(require 'shift-text)
+(use-package shift-text)
 (global-set-key (kbd "M-<up>") 'shift-text-up)
 (global-set-key (kbd "M-<down>") 'shift-text-down)
 
 ;; allow multiple cursors
-(require 'multiple-cursors)
+(use-package multiple-cursors)
 (global-unset-key (kbd "M-<down-mouse-1>"))
 (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
 (global-set-key (kbd "M-m") 'mc/mark-all-like-this)
@@ -44,12 +44,12 @@
 (delete-selection-mode 1)
 
 ;; change between CamelCase and snake_case
-(require 'string-inflection)
+(use-package string-inflection)
 (global-set-key (kbd "M-c") 'string-inflection-lower-camelcase)
 (global-set-key (kbd "M-s") 'string-inflection-underscore)
 
 ;; folding functionality
-(require 'origami)
+(use-package origami)
 (add-to-list 'origami-parser-alist '(rust-mode . origami-c-style-parser))
 (add-to-list 'origami-parser-alist '(javascript-mode . origami-c-style-parser))
 (define-key origami-mode-map (kbd "M-f") 'origami-toggle-node)
@@ -73,7 +73,7 @@
 (global-set-key (kbd "<f5>") 'whitespace-cleanup)
 
 ;; delete all whitespaces if deleting one
-(require 'hungry-delete)
+(use-package hungry-delete)
 (global-hungry-delete-mode)
 
 ;; when whitespace is active, leaves exactly one space wherever it is typed
@@ -124,7 +124,7 @@ Puts point in the middle line as well as indent it by correct amount."
                     (beginning-of-buffer (goto-char (point-min))))))
 
 ;; Smooth scrolling
-(require 'smooth-scrolling)
+(use-package smooth-scrolling)
 (smooth-scrolling-mode 1)
 
 ;;; buffers.el ends here

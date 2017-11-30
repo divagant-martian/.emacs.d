@@ -10,6 +10,13 @@
 
 ;; installed packages
 
+(package-initialize)
+(when (not package-archive-contents)
+  (package-refresh-contents)
+  (package-install 'use-package))
+(require 'use-package)
+(setq use-package-always-ensure t)
+
 ;; to install everything: M-x RET package-install-selected-packages
 ;; Adding custom libraries
 (add-to-list 'load-path "~/.emacs.d/config")

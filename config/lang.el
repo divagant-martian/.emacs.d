@@ -11,6 +11,7 @@
 (setq-default company-dabbrev-downcase nil)
 
 ;; documentation
+(use-package company-quickhelp)
 (company-quickhelp-mode 1)
 (setq-default company-quickhelp-delay nil)
 (eval-after-load 'company
@@ -31,7 +32,7 @@
 
 ;; HTML, Js, Jsx, Css ----------------------------------------------------------
 
-(require 'web-mode)
+(use-package web-mode)
 (add-to-list 'auto-mode-alist '("\\.html$" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
