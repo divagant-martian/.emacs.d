@@ -36,6 +36,7 @@
 (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
 (global-set-key (kbd "M-m") 'mc/mark-all-like-this)
 (global-set-key (kbd "M-n") 'mc/mark-next-like-this)
+(global-set-key (kbd "M-e") 'mc/edit-lines)
 
 ;; clean buffer
 (global-set-key (kbd "C-x DEL") 'erase-buffer)
