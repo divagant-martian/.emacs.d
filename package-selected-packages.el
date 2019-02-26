@@ -47,7 +47,7 @@
      ("deleted" :foreground "#ff2c4b" :bold t))))
  '(package-selected-packages
    (quote
-    (expand-region flycheck lenlen-theme origami scala-mode string-inflection multiple-cursors hungry-delete alchemist elixir-mode flycheck-credo theme-looper zenburn-theme web-mode smooth-scrolling smart-comment shift-text racer neotree minibuffer-complete-cycle json-mode js2-mode github-theme flycheck-pyflakes flycheck-elixir flatui-theme flatland-theme flatland-black-theme django-theme distinguished-theme display-theme darktooth-theme darkokai-theme darkane-theme dakrone-theme cyberpunk-theme company-racer company-quickhelp color-theme-sanityinc-solarized colonoscopy-theme clues-theme cl-lib-highlight caroline-theme badwolf-theme atom-one-dark-theme arjen-grey-theme ample-theme afternoon-theme)))
+    (expand-region flycheck lenlen-theme origami scala-mode string-inflection multiple-cursors hungry-delete alchemist elixir-mode flycheck-credo theme-looper zenburn-theme web-mode smooth-scrolling shift-text racer neotree minibuffer-complete-cycle json-mode js2-mode github-theme flycheck-pyflakes flycheck-elixir flatui-theme flatland-theme flatland-black-theme django-theme distinguished-theme display-theme darktooth-theme darkokai-theme darkane-theme dakrone-theme cyberpunk-theme company-racer company-quickhelp color-theme-sanityinc-solarized colonoscopy-theme clues-theme cl-lib-highlight caroline-theme badwolf-theme atom-one-dark-theme arjen-grey-theme ample-theme afternoon-theme)))
  '(pos-tip-background-color "#E6DB74")
  '(pos-tip-foreground-color "#242728")
  '(vc-annotate-background nil)

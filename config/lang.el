@@ -47,10 +47,12 @@
 (setq-default js-indent-level 2)
 
 ;; Scala -----------------------------------------------------------------------
-(use-package scala-mode
-  :interpreter
-  ("scala" . scala-mode))
+;;(use-package scala-mode
+;;  :interpreter
+;;  ("scala" . scala-mode))
 
+;; Golang ----------------------------------------------------------------------
+(use-package go-mode)
 
 
 ;;; lang.el ends here
